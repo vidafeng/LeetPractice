@@ -3,27 +3,35 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-    // two pointers buy, sell at first pos and second pos of array
-    // initialize maxProfit
-    // we always want left pointer to be less than right pointer (for profit)
-    // return the maximum profit you can achieve
+    // two pointer strategy
+    // loop thru prices until right pointer is less than/equal to prices length
 
+    // if leftPrice is less than rightPrice, calculate currentProfit by subtacting
+    // check if currentProfit is greater than the maxProfit, 
+        // if yes, reassign maxProfit
+        // increment right pointer
+    // else move our left pointer to be the minimum (rightPrice, j)
+        // increment right pointer
+    // we always want leftPrice to be LESS in order to gain profit from selling
+
+    // return maxProfit
+
+
+    let maxProfit = 0; 
     let i = 0;
-    let j = 1; 
+    let j = i + 1;
 
-    let maxProfit = 0;
+    while (j <= prices.length) {
 
-    while (i < prices.length) {
         if (prices[i] < prices[j]) {
-            let currentProfit = prices[j] - prices[i]
-            if (currentProfit > maxProfit) {
-                maxProfit = currentProfit;
-            }
-        } else { 
+            let currentProfit = prices[j] - prices[i];
+            maxProfit = Math.max(maxProfit, currentProfit)
+        } else {
             i = j;
         }
         j += 1;
     }
-    return maxProfit; 
-
+    
+    return maxProfit;
+    
 };
