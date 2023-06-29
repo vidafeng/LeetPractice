@@ -8,8 +8,9 @@ class Solution:
         while right < len(prices):
             if prices[left] < prices[right]:
                 currentProfit = prices[right] - prices[left]
-                if currentProfit > maxProfit: 
-                    maxProfit = currentProfit
+                # if currentProfit > maxProfit: 
+                #     maxProfit = currentProfit
+                maxProfit = max(currentProfit, maxProfit)
             else: 
                 left = right
             
