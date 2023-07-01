@@ -5,8 +5,11 @@
  */
 var isAnagram = function(s, t) {
     // dictionary method
-    // loop through s and create a dictionary
-    // see if the letters of t is in the dictionary
+    // loop through s and create a dictionary of all letter and occurences
+    // loop through t and check if the letter is a key in the dictionary
+        // if yes, decrease occurence
+    // loop through dictionary, if any value does not equal 0 return false
+        // all letter vals  should be 0 if strings are anagrams
 
     let dict = {};
 
