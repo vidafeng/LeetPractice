@@ -18,10 +18,10 @@ var isAnagram = function(s, t) {
     }
 
     for (let char of t) {
-        if (char in dict && dict[char] > 0) {
-            dict[char] -= 1;
+        if (dict[char] === undefined) {
+            return false
         } else {
-            return false;
+            dict[char] -= 1;
         }
     }
 
