@@ -5,15 +5,21 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        return sorted(s) == sorted(t)
 
-    
-    # def charCount(self, str):
-    #     count = {}
+        if len(s) != len(t):
+            return False
+        
+        hash = {}
 
-    #     for char in str:
-    #         if char not in count:
-    #             count[char] = 0
-    #     count[char] += 1
-    
-    #     return count
+        for char in s:
+            hash[char] = hash.get(char, 0) + 1
+        
+        for char in t: 
+            if char not in hash or hash[char] == 0:
+                return False
+            else:
+                hash[char] -= 1
+                
+        return True
+
+
