@@ -13,6 +13,10 @@ var isAnagram = function(s, t) {
 
     let dict = {};
 
+    if (s.length !== t.length) {
+        return false; 
+    }
+
     for (let char of s) {
         if (!(char in dict)) {
             dict[char] = 0;
