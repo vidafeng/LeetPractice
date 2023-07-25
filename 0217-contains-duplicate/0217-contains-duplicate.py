@@ -15,7 +15,7 @@ class Solution:
 
 # SORT
 # sort the num arr and then loop
-# if i is equal to i+1, then we have a duplicate
+# if i is equal to i-1, then we have a duplicate
         
         nums.sort()
         n = len(nums)
