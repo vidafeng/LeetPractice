@@ -17,13 +17,27 @@ class Solution:
 # sort the num arr and then loop
 # if i is equal to i-1, then we have a duplicate
         
-        nums.sort()
-        n = len(nums)
+#         nums.sort()
+#         n = len(nums)
         
-        for i in range(1, n):
-            if nums[i] == nums[i-1]:
-                return True
+#         for i in range(1, n):
+#             if nums[i] == nums[i-1]:
+#                 return True
             
+#         return False
+
+# HASH SET
+# create a set
+# loop through nums arr and see if current num is in the set
+
+        hashSet = set()
+        print(hashSet)
+        for num in nums:
+            if num in hashSet:
+                return True
+            else: 
+                hashSet.add(num)
+
         return False
             
     
