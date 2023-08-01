@@ -17,6 +17,7 @@ class Solution:
         while fast and fast.next:
             head = head.next
             fast = fast.next.next
+            # is operator checks if it is located at the same place in mem
             if head is fast: 
                 return True
         return False
