@@ -9,8 +9,9 @@ class Solution:
         # tortoise and hare
         # initalize fast and slow pointers
             # fast = traverse two at a time
-            # slow = traverse one at a time
+            # head / slow = traverse one at a time
             # if both pointers end up at the same node, cycle is true 
+
 
         fast = head
         while fast and fast.next:
