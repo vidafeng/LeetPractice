@@ -1,5 +1,8 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
+        # iterate over the matrix and DFS at each point whenever a point is land (1)
+        # mark visited as 2 to avoid revisit 
+        # increment ans each time need to do a DFS 
         if not grid: return 0
         m, n = len(grid), len(grid[0])
         ans = 0
