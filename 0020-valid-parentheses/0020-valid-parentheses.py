@@ -1,5 +1,10 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        # last type of bracket that is opened
+        # must be the FIRST one to be closed --> LIFO
+        # use stack to keep track of all brackets
+
+        
         stack = []
 
         dict = {
