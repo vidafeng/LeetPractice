@@ -5,6 +5,11 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        # traverse the two lists
+        # at every node, add values together
+        # create new node with the sum
+        # link it to head
+        
         head = ListNode()
         current = head
         carry = 0
