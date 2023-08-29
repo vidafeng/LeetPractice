@@ -12,6 +12,11 @@ class Solution:
         #     if hash[num] == 1:
         #         return num
 
+# create a set for nums array
+    # set removes all duplicate values
+# loop thru set
+# if nums.count for current i is equal to 1
+# return i
         for i in set(nums):
             if nums.count(i) == 1:
                 return i
