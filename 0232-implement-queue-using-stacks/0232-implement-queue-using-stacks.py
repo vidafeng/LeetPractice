@@ -1,29 +1,35 @@
 class MyQueue:
 
     def __init__(self):
-        self.s1 = []
-        self.s2 = []
+        self.front = []
+        self.back = []
         
 
     def push(self, x: int) -> None:
-        while self.s1:
-            self.s2.append(self.s1.pop())
-        self.s1.append(x)
+        self.front.append(x)
         
-        while self.s2:
-            self.s1.append(self.s2.pop())
-        
-
+# Remove element from front of the queue and return it 
     def pop(self) -> int:
-        return self.s1.pop()
-        
+        self.peek()
+        return self.back.pop()
 
+
+        
+# Returns element at front of the queue
     def peek(self) -> int:
-        return self.s1[-1]
-        
+        if not self.back:
+            while self.front:
+                self.back.append(self.front.pop())
 
+        return self.back[-1]
+
+
+        
+# returns true if the queue is empty
+# returns false if otherwise
+# not is boolean operator
     def empty(self) -> bool:
-        return not self.s1
+        return not self.front and not self.back
         
 
 
