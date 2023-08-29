@@ -1,5 +1,8 @@
 class MyQueue:
+# front stack acts main storage
+# back stack is used for temp popping and peeking
 
+# stacks are LIFO so to implement a queue which is FIFO, we have to to use 2 stacks
     def __init__(self):
         self.front = []
         self.back = []
@@ -17,6 +20,11 @@ class MyQueue:
         
 # Returns element at front of the queue
     def peek(self) -> int:
+        # if back stack is empty
+        # while there are elements in front stack
+        # pop each element off
+        # and append it to back stack
+        # the last element in back stack will be the first element of the queue 
         if not self.back:
             while self.front:
                 self.back.append(self.front.pop())
