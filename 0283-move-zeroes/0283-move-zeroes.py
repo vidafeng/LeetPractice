@@ -3,6 +3,7 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        # Two pointers tortoise hare
         slow = 0
         for fast in range(len(nums)):
             if nums[fast] != 0 and nums[slow] == 0:
