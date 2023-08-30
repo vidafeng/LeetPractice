@@ -3,6 +3,8 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        # iterate through the list
+        # move all non zero elements to the begininf of the list
         index = 0
 
         # Place non-zero elements at the start of the list
