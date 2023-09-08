@@ -1,5 +1,10 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        # iterate through intervals to find the correct position to insert the new interval while maintaining the sorted order
+        # after insertion
+        # iterate over modified array to merge any overlapping intervals by updating the end time of the previous interval
+        # return modified array with the new interval inserted and any overlapping intervals merged
+
         l = []
         for i in intervals:
             if i[1] < newInterval[0]:
