@@ -5,6 +5,7 @@ class Solution:
         # When current sum is negative, reset to 0
 
         currentSum = 0
+        # maxSum needs to be the min possible integer
         maxSum = float('-inf')
 
         for num in nums:
