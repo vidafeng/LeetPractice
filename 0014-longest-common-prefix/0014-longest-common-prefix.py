@@ -1,5 +1,10 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        # vertical scanning
+        # scan the first character of every word
+        # then scan the second character
+        # until a mismatch is found
+        # return a slice of the string with the longest common prefix
 
         base = strs[0]
 
