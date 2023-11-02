@@ -1,15 +1,19 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        # two pointers method
-        # compare each element to the previous element to check for dup
-        # if i is not equal to i-1
-            # we have new unique element
-        # update j to element at i
-        # increment j by 1 for next position
-        
+        # if current element i is NOT equal to previous element it means we have encountered a new unique element
+        # update nums[j] with the value of the unique element at nums[i]
+        # increment j by 1
+        # this overwrites any duplicates in the array and only keep unique elements
+        # return the number of unique elements in nums
+
         j = 1
+
         for i in range(1, len(nums)):
-            if nums[i] != nums[i - 1]:
+            if nums[i] != nums[i-1]:
                 nums[j] = nums[i]
                 j += 1
         return j
+
+
+
+        
