@@ -7,11 +7,12 @@ class Solution:
 # left pointer at index 0
 # right pointer at end of string
 # check characters at index l if they are either letters or nums
-# if not, increment
+# if not, increment by 1 
 # check characters at index r if they are either letters or nums 
-# if not, decrement
-# if characters are letters or nums, check against each other
+# if not, decrement by 1 
+# if current characters at index l and r are letters or nums, check against each other
 # if not the same, return false
+# if same, increment l by 1 and decrement r by 1
 
         l = 0
         r = len(s) - 1
