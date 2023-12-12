@@ -1,31 +1,28 @@
-class Solution(object):
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+# hash map 
+# if hash map is the same then return true
 
-        if len(s) != len(t):
-            return False
+        hashS = {} 
+        hashT = {}
         
-        hash = {}
-
         for char in s:
-            hash[char] = hash.get(char, 0) + 1
-            # get method to increment the count of char if it alrdy exists, otherwise set the count to 1
+            if char not in hashS:
+                hashS[char] = 1
+            else: 
+                hashS[char] += 1
         
-        for char in t: 
-            if char not in hash or hash[char] == 0:
-                return False
-            else:
-                hash[char] -= 1
-
-        return True
-
-
-# time complexity: o(n) where n is the legnth of the longer string since we need to iterate over each character of both strings once
-
-# space is o(n) bc we use hash map to store frequency of char in the first string
-
-
+        for char in t:
+            if char not in hashT:
+                hashT[char] = 1
+            else: 
+                hashT[char] += 1
+                
+        if hashS == hashT:
+            return True
+        
+        return False
+            
+    
+        
+        
