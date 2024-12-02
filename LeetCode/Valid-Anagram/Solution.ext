@@ -1,0 +1,70 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+# hash map 
+# if hash map is the same then return true
+
+        # hashS = {} 
+        # hashT = {}
+        
+#         for char in s:
+#             if char not in hashS:
+#                 hashS[char] = 1
+#             else: 
+#                 hashS[char] += 1
+        
+#         for char in t:
+#             if char not in hashT:
+#                 hashT[char] = 1
+#             else: 
+#                 hashT[char] += 1
+                
+#         if hashS == hashT:
+#             return True
+        
+#         return False
+
+# METHOD 2 HASH 
+# get method returns value of the item with specified key
+# 0 as default value second param
+
+# if length of strings are not equal, return false
+# else iterate over length of stringS
+# create hashmapS to keep count of letter occurences in stringS
+# iterate over stringT and decrement the occurences in hashmapS
+# if char is not in hashmapS return False
+# finally check if any key as non-zero frequency in hashmapS
+
+
+
+        hashS = {}
+        
+        if len(s) != len(t):
+            return False
+        
+        for i in range(len(s)):
+            hashS[s[i]] = 1 + hashS.get(s[i], 0)
+            
+        for char in t:
+            if char in hashS:
+                hashS[char] -= 1
+            else:
+                return False
+                
+    
+        for key in hashS:
+            print(hashS)
+            if hashS[key] != 0:
+                return False
+            
+        return True
+            
+            
+        
+            
+        
+        
+            
+            
+    
+        
+        
